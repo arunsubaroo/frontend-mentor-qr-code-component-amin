@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
+
 :root {
     --white: hsl(0, 0%, 100%);
     --light-gray: hsl(212, 45%, 89%);
@@ -13,18 +15,21 @@
 
 }
 
+body {
+    font-family: 'Outfit', sans-serif;
+    margin: 0;
+}
+
 main {
-    max-width: 1300px;
-    max-height: 800px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     background-color: var(--light-gray);
-    margin: auto;
+    margin: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .container {
-    max-width: 375px;
+    max-width: 350px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,7 +37,7 @@ main {
     background-color: var(--white);
     width: fit-content;
     border-radius: 15px;
-    margin-bottom: 24px;
+    margin-block: 24px;
 }
 
 h1 {
@@ -58,7 +63,7 @@ p {
     display: block;
     width: calc(100% - 2 * var(--margin));
     aspect-ratio: 1;
-    margin: 16px;
+    margin: var(--margin);
     border-radius: 12px;
 }
 
@@ -69,4 +74,10 @@ p {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media (max-width: 400px) {
+    main {
+        margin: 0;
+    }
 }
